@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    display: grid;
+    grid-template: 2em 1fr 3em/1fr;
+    min-height: 100vh;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.hero {
+    background-color: lightgray;
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    display: grid;
+    grid-template: 1fr/80% 1fr 1fr 1fr;
+    position:fixed;
+    top:0;
+    width: 100vw;
+    height: 2em;
+}
+.hero h1, .hero p {
+    padding: 0;
+    margin: 0;
+}
+.output {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    grid-row: 2;
+    max-height: calc(100vh - 5em);
+}
+.output p::before {
+    content: "> ";
+}
+.input {
+    position: fixed;
+    bottom: 0;
+    border:solid 1px white;
+    background-color: black;
+    width: 100vw;
+    height: 3em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.input p {
+    width: 2%;
+}
+#text {
+    background: inherit;
+    border: none;
+    padding: 0;
+    color:inherit;
+    width:98%;
+    font-family: inherit;
+}
+#text:focus {
+    outline: none;
+}
